@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ví dụ về Slot</title>
+  <style>
+    my-element {
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sử dụng phần tử tùy chỉnh -->
+  <my-element>
+      <p>world</p>
+  </my-element>
+
+  <script>
+    // Định nghĩa phần tử tùy chỉnh
+    class MyElement extends HTMLElement {
+      constructor() {
+        super();
+        const shadow = this.attachShadow({mode: "open"});
+
+        // Tạo cấu trúc của phần tử tùy chỉnh
+        const wrapper = document.createElement("div");
+
+        // Thêm các slot
+        // chỉ các slot có trường name mới được hiển thị và có thể thay thế, các slot không có trường name sẽ không hiển thị và
+        // luôn bị thay thế
+        wrapper.innerHTML = "<p>aaaaa</p>";
+
+        // Đính kèm wrapper vào shadow DOM
+        shadow.appendChild(wrapper);
+      }
+    }
+
+    // Đăng ký phần tử tùy chỉnh
+    customElements.define("my-element", MyElement);
+    const customElement = document.querySelector("my-element");
+    customElement.innerHTML = "<p>Hello.</p>";
+
+  </script>
+</body>
+
+</html>

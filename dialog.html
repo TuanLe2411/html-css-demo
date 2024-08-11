@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dialog with html</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      #auto_open_dialog {
+        width: 50%;
+        height: 25%;
+      }
+
+      #fast_close_dialog {
+        float: right;
+        border: 1px solid;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Dialog for html</header>
+    <main>
+      <h2>Auto open dialog</h2>
+      <p>
+        - Để mở dialog dùng thẻ <strong>dialog</strong> với thuộc tính
+        <strong>open</strong>
+        <dialog id="auto_open_dialog" open>
+          <form>
+            <button
+              type="submit"
+              aria-label="close"
+              id="fast_close_dialog"
+              autofocus
+            >
+              X
+            </button>
+            <h2>Dialog content</h2>
+            <p>Some content....</p>
+            <button
+              type="submit"
+              aria-label="close"
+              id="close_dialog"
+              tabindex="0"
+            >
+              Close dialog
+            </button>
+          </form>
+        </dialog>
+      <main></main>
+      <p>Event detail: </p>
+      <textarea id="event_detail"></textarea>
+      </p>
+      <button type="submit" id="open_dialog">Re open dialog</button>
+    </main>
+    <script>
+      const dialog = document.getElementById("auto_open_dialog");
+      const fastCloseDialogButton = document.getElementById("fast_close_dialog");
+      const normalCloseDialogButton = document.getElementById("close_dialog")
+      const openDialogButton = document.getElementById("open_dialog")
+      const eventDisplay = document.getElementById("event_detail")
+      fastCloseDialogButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        onCloseDialog()
+        :q
+        eventDisplay.value = "Fast close"
+      })
+      normalCloseDialogButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        onCloseDialog()
+        eventDisplay.value = "normal close"
+      })
+      openDialogButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        onOpenDialog()
+        eventDisplay.value = "open dialog"
+      })
+      function onCloseDialog() {
+        dialog.close()
+      }
+      function onOpenDialog() {
+        dialog.showModal()
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+#overflow_text {
+  width: 80px;
+  height: 60px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.awesome {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  border: 5px solid;
+  padding: 2rem;
+
+  /* The important extrinsic width */
+  width: 320px;
+}
+
+.awesome[data-sizing="true"] {
+  width: min-content;
+}
+
+/*
+
+/*
+Presentational styles
+*/
+.awesome {
+  --flow-space: 2rem;
+}
+
+#margin_box {
+  border: 1px solid black;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 10px;
+}
+
+#border_box {
+  border: 1px solid black;
+  display: block;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+#padding_box {
+  border: 1px solid black;
+  display: block;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#content_box {
+  border: 1px solid black;
+  display: block;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

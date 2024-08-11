@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Template</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Teamplate</h1>
+    </header>
+    <main>
+      <h2>Template</h2>
+      <p>Là một thành phần html, không được biên dịch tại thời điểm tải trang, mà chỉ có thể hiển thị trong thời gian chạy<br>
+        thông qua mã javascript</p>
+      <p>Ví dụ: </p>
+      <session>
+        <button type="submit" id="display_template">Display template</button>
+        <div id="template_display"></div>
+      </session>
+      <template id="test_template">
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </template>
+    </main>
+    <script>
+      let testTemplate = document.getElementById("test_template")
+      let button = document.getElementById("display_template")
+      button.addEventListener('click', (event) => {
+        event.preventDefault()
+        document.getElementById("template_display").appendChild(testTemplate.content)
+      })
+    </script>
+  </body>
+</html>
