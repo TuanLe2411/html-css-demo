@@ -1,0 +1,48 @@
+.item {
+  border: 1px solid grey;
+  background: yellow;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /*grid-template-rows: 100px 200px 300px;*/
+  grid-template-rows: 100px 1fr 1fr 100px;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "sidebar comment comment"
+    "footer footer footer";
+  height: 100vh;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+body {
+  padding: 20px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.comment {
+  grid-area: comment;
+}
+
+.content {
+  grid-area: content;
+}

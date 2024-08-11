@@ -23,44 +23,54 @@
 
 /*
 
-/*
-Presentational styles
-*/
+  /*
+  Presentational styles
+  */
 .awesome {
   --flow-space: 2rem;
 }
 
 #margin_box {
-  border: 1px solid black;
+  border: 1px solid blue;
   height: 400px;
   width: 100%;
   text-align: center;
   display: block;
-  padding: 10px;
+  padding: 2px;
+  font-size: 10px;
+  background-color: aqua;
 }
 
 #border_box {
   border: 1px solid black;
   display: block;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
+  padding: 2px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 335px;
+  background-color: blue;
 }
 
 #padding_box {
-  border: 1px solid black;
+  border: 1px solid blue;
   display: block;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 2px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 265px;
+  background-color: aqua;
 }
 
 #content_box {
-  border: 1px solid black;
+  border: 1px solid blue;
   display: block;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 205px;
+  background-color: white;
+}
+
+#border_box_title {
+    font-weight: bolder;
+    color: white;
 }
