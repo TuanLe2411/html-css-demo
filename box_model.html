@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Box_model_css</title>
+    <link href="css/box_model.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>Box Model Css</header>
+    <main>
+      <h2>1. This is a box with text overflow:</h2>
+      <p id="overflow_text">
+        I am a paragraph of text that has a few words in it.
+      </p>
+      <h2>2. This is a box with resize button</h2>
+      <figure>
+        <p>
+          Notice that when the box is using <strong>extrinsic sizing</strong>,
+          there’s a limit of how much content you can add before it overflows
+          out of the box’s bounds. This makes the word, “awesome”, overflow.
+        </p>
+      </figure>
+      <label class="togger" for="size_switch">
+        <span>Turn on intrinsic sizing</span>
+        <input type="checkbox" id="size_switch" role="switch" />
+      </label>
+      <p class="awesome" data-element="awesome">CSS is awesome</p>
+      <section>
+        <h3 style="font-size: 30px; text-align: center">Box sizing effect</h3>
+      </section>
+      <div id="margin_box">
+        <p>Margin</p>
+        <div id="border_box">
+          <p id="border_box_title">Border</p>
+          <div id="padding_box">
+            <p>Padding</p>
+            <div id="content_box">
+              <p>Content</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const sizeSwitch = document.querySelector("#size_switch");
+        const awesome = document.querySelector('[data-element="awesome"]');
+        sizeSwitch.addEventListener("change", (event) => {
+          event.preventDefault();
+          awesome.setAttribute(
+            "data-sizing",
+            sizeSwitch.checked ? "true" : "false"
+          );
+        });
+      </script>
+    </main>
+  </body>
+</html>

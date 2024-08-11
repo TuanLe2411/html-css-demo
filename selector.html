@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        align-items: center;
+        display: inline-flexbox;
+        justify-content: center;
+        margin: auto;
+        margin-top: 50px;
+      }
+
+      div:hover {
+        background-color: lightseagreen;
+        border-color: mediumaquamarine;
+        border-width: 3px;
+        cursor: pointer;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bolder;
+        text-shadow: 1px 1px 1px lightblue, 0 0 25px lightcyan,
+          0 0 5px greenyellow;
+        width: 200px;
+        height: 200px;
+        font-size: 30px;
+        text-transform: uppercase;
+        transform: translateX(50px);
+      }
+
+      .div.round {
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+
+      main {
+        display: block;
+        margin: auto;
+        padding: auto;
+      }
+
+      .box {
+        border: 1px solid black;
+      }
+      .my-element {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 500px;
+        float: left;
+        display: flow-root;
+     }
+     .box1 {
+        border: 1px solid red;
+        position: fixed;
+     }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Selector in css</h1>
+    </header>
+    <main>
+      <main class="wrapper">
+        <div class="my-element">
+          <div class="box1">child_1</div>
+          <div class="box">child_2</div>
+          <div class="box">child_3</div>
+          <div class="box">child_4</div>
+          <div class="box">child_5</div>
+        </div>
+      </main>
+    </main>
+  </body>
+</html>
